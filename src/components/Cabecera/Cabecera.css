@@ -1,0 +1,187 @@
+.Cabecera {
+    display: flex;
+    align-items: center;
+    background-color: rgb(19, 18, 18);
+    justify-content: space-between;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    position: relative; /* Añade posición relativa al contenedor principal */
+    border-bottom: 2px solid #fcfafa;
+    z-index: 100;
+}
+
+.Cabecera-button {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+    cursor: pointer;
+    margin-top: 13px;
+    position: relative;
+    top: 2px;
+    left: 6px; 
+}
+
+.Cabecera-button > .div-button {
+    background: rgb(252, 251, 251);
+    height: 2.0px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.Cabecera-button .div-button.menu-active:nth-child(1) {
+    transform: rotate(40deg);
+}
+
+.Cabecera-button .div-button.menu-active:nth-child(2) {
+    opacity: 0;
+}
+
+.Cabecera-button .div-button.menu-active:nth-child(3) {
+    transform: rotate(-40deg);
+}
+
+/* aca van los esilos de la barra de busqueda y de los dos botones de inicio y registrarse*/
+.Search-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos para el botón de búsqueda */
+.Search-button {
+    background-color: #58595a;
+    color: #fff;
+    border: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: -10px;
+}
+.Search-button:hover {
+    background-color: #2d2d2e;
+}
+.button-rigth{
+    display: flex;
+    gap: 10px;
+}
+/* Estilos para los botones adicionales (puedes ajustarlos según sea necesario) */
+.Extra-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Extra-button1{
+    white-space: nowrap;
+    border: none;
+}
+
+.Extra-button2{
+    margin-right: 20px;
+}
+
+.Extra-button:hover {
+    background-color: #ddd8d8;
+    color: #000;
+    transition: .6s;
+}
+
+.Search-input {
+    width: 37%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left:28% ;
+}
+
+
+/* Estilos del menú */
+.Cabecera-nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    background-color: rgb(19, 18, 18);
+    position: absolute; /* Posición absoluta para el menú */
+    top: 100%; /* Posiciona el menú debajo del contenedor */
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Cabecera-nav .Cabecera-a {
+    opacity: 0; /* Inicialmente, los enlaces tienen una opacidad de 0 */
+    transform: translateY(-20px); /* Inicialmente, desplaza los enlaces hacia arriba */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones para opacidad y transformación */
+}
+
+.Cabecera-ul {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 43px;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.Cabecera-li {
+    padding: 0;
+    width:100%;
+    border-right: 1px solid #ccc;
+}
+
+.Cabecera-li1{
+    margin-left: 20px;
+}
+
+.Cabecera-a {
+    text-decoration: none;
+    color: #e2dfdf;
+    font-weight: bold;
+    transition: 0.3s;
+    font-weight: 300;
+    font-size: 90%;
+    margin-left: 30%;
+}
+
+/* Estilos del menú cuando está visible */
+.Cabecera.menu-visible .Cabecera-nav {
+    max-height: 400px; /* Altura máxima del menú desplegado */
+    opacity: 1; /* Añade una opacidad de 1 para que las categorías aparezcan */
+    transition: max-height .5s ease-in-out, opacity 0.3s ease-in-out; /* Agrega transiciones para max-height y opacity */
+}
+
+/* Cambiar color al pasar el mouse sobre los enlaces */
+.Cabecera.menu-visible .Cabecera-a:hover {
+    color: #ccc; /* Cambiar el color al pasar el mouse sobre los enlaces */
+}
+
+@keyframes fadeInAndSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación a los enlaces */
+.Cabecera-nav .Cabecera-a.show {
+    animation: fadeInAndSlide 0.5s ease-in-out forwards; /* Agrega la animación */
+}

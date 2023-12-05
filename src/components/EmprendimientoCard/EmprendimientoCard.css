@@ -1,0 +1,38 @@
+.emprendimiento-card {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 45%;
+  }
+  
+  .emprendimiento-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .emprendimiento-info {
+    flex: 1;
+    padding-left: 10px;
+  }
+  
+  .emprendimiento-nombre {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .emprendimiento-descripcion {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .emprendimiento-ubicacion {
+    font-size: 14px;
+    color: #666;
+  }

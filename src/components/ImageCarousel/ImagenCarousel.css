@@ -1,0 +1,10 @@
+.carousel{
+    max-height: 400px;
+    padding-top: 4px;
+}
+
+.carousel img {
+    max-width: 100%; /* Hace que la imagen no se estire más allá de su contenedor */
+    max-height: 100%; /* Hace que la imagen no se estire más allá de su contenedor */
+    object-fit: cover; /* Ajusta la imagen dentro de su contenedor manteniendo la relación de aspecto */
+}

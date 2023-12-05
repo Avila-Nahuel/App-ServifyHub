@@ -1,0 +1,55 @@
+.atajos {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    border-bottom: 2px solid #ffffff;
+    margin-left: 20px;
+    height: 35px;
+    cursor: pointer;
+    min-height: 40px;
+}
+    
+.atajos-div, .atajos-li {
+    flex-grow: 1; /* Hace que los elementos se expandan para ocupar todo el espacio disponible */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 5px 0px;
+    font-size: 14px;
+    list-style: none;
+    margin-top: 4px;
+}
+
+   /* Estilos comunes para los elementos de texto */
+.atajos-div, .atajos-li {
+    padding: 5px 10px; /* Añade espaciado alrededor del texto */
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.atajos-li:hover {
+    color: #000000; /* Cambia el color del texto al pasar el mouse */
+    background-color: rgb(221, 220, 220); /* Cambia el fondo al pasar el mouse */
+    border-radius: 5px; /* Agrega el radio de borde al pasar el mouse */
+  }
+
+/* -------------------------------------------------------------------------------------------- */
+
+.atajos-div {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #1a1818;
+    position: relative; /* Agrega position: relative; */
+    z-index: 1;
+  }
+
+.container-cards {
+  display: flex; /* Establece un contenedor flexible */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila si no caben en el ancho del contenedor */
+}
+
+.card {
+  flex: 0 0 calc(20.33% - 20px); /* Calcula el ancho de cada tarjeta para ocupar aproximadamente un tercio del contenedor, con margen */
+  margin: 10px; /* Agrega margen entre las tarjetas */
+}
